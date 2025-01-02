@@ -8,8 +8,8 @@ from sklearn.metrics.pairwise import linear_kernel
 import ast
 
 # Load datasets
-credits_df = pd.read_csv("C:/PI1/data/cleaned/credits.csv")
-movies_df = pd.read_csv("C:/PI1/data/cleaned/movies_cleaned_fixed.csv")
+credits_df = pd.read_csv("credits.csv")
+movies_df = pd.read_csv("movies_cleaned_fixed.csv")
 
 # Preprocess datasets
 movies_df = movies_df.fillna(0)
