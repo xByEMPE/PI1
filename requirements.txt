@@ -1,0 +1,7 @@
+fastapi
+pandas
+numpy
+matplotlib
+seaborn
+unidecode
+scikit-learn
