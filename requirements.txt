@@ -6,3 +6,4 @@ seaborn
 unidecode
 scikit-learn
 uvicorn
+wordcloud
