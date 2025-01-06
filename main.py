@@ -7,6 +7,14 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 import ast
 
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    return JSONResponse(content={
+        "message": "Hola, bienvenido, no te preocupes si no observas nada, solo agrega /docs al final del link que tienes en tu navegador"
+    })
+
 # Load datasets
 credits_df = pd.read_csv("credits.csv")
 movies_df = pd.read_csv("movies_cleaned_fixed.csv")
@@ -20,9 +28,6 @@ movies_df["revenue"] = movies_df["revenue"].astype(float)
 movies_df["return"] = np.where(movies_df["budget"] > 0, movies_df["revenue"] / movies_df["budget"], 0)
 movies_df["release_date"] = pd.to_datetime(movies_df["release_date"], errors='coerce')
 movies_df["normalized_title"] = movies_df["title"].apply(lambda x: unidecode.unidecode(x.lower()) if isinstance(x, str) else "")
-
-# Initialize FastAPI app
-app = FastAPI()
 
 # Helper functions
 SPANISH_MONTHS = {
