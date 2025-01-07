@@ -70,6 +70,7 @@ Requisitos para poder hacer uso de este proyecto:
 
 ## estructura del proyecto
 
+```plaintext
 PI1/
 ├── data/
 │   ├── raw/         # Datos en formato original
@@ -81,7 +82,7 @@ PI1/
     └── eda.ipynb    # Notebook de EDA
 ├── main.py          # Código para el uso de la API
 └── requirements.txt # Archivo con las dependencias necesarias
-
+```
 ## Uso de los archivos
 Para ejeccutar la API se debe seguir los siguientes pasos:
 
